@@ -32,6 +32,9 @@
       },
       "runtime" : {
          "requires" : {
+            "AnyEvent" : "7",
+            "Mouse" : "0.97",
+            "Object::Event" : "1.23",
             "parent" : "0"
          }
       }
@@ -39,7 +42,7 @@
    "provides" : {
       "AnyEvent::IMAP" : {
          "file" : "lib/AnyEvent/IMAP.pm",
-         "version" : "0.01"
+         "version" : "0.02"
       },
       "AnyEvent::IMAP::Address" : {
          "file" : "lib/AnyEvent/IMAP/Address.pm",
@@ -60,5 +63,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
