@@ -42,18 +42,18 @@
    "provides" : {
       "AnyEvent::IMAP" : {
          "file" : "lib/AnyEvent/IMAP.pm",
-         "version" : "0.02"
+         "version" : "0.03"
       },
-      "AnyEvent::IMAP::Address" : {
-         "file" : "lib/AnyEvent/IMAP/Address.pm",
+      "Mail::IMAP::Address" : {
+         "file" : "lib/Mail/IMAP/Address.pm",
          "version" : 0
       },
-      "AnyEvent::IMAP::Envelope" : {
-         "file" : "lib/AnyEvent/IMAP/Envelope.pm",
+      "Mail::IMAP::Envelope" : {
+         "file" : "lib/Mail/IMAP/Envelope.pm",
          "version" : 0
       },
-      "AnyEvent::IMAP::Util" : {
-         "file" : "lib/AnyEvent/IMAP/Util.pm",
+      "Mail::IMAP::Util" : {
+         "file" : "lib/Mail/IMAP/Util.pm",
          "version" : 0
       }
    },
@@ -63,5 +63,5 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }

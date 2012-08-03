@@ -2,14 +2,14 @@ package AnyEvent::IMAP;
 use strict;
 use warnings;
 use 5.010001;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use parent qw(Object::Event);
 
 use AnyEvent::Socket;
 use AnyEvent::Handle;
 use AnyEvent::TLS;
-use AnyEvent::IMAP::Util;
+use Mail::IMAP::Util;
 
 use Mouse;
 
@@ -306,6 +306,16 @@ $res is a response value. You can filter it by $filter in argument.
 
 is available in example/demo.pl
 
+=head1 FAQ
+
+=over 4
+
+=item How can I decode UTF-7 folder names?
+
+use L<Encode::IMAPUTF7>.
+
+=back
+
 =head1 AUTHOR
 
 Tokuhiro Matsuno E<lt>tokuhirom AAJKLFJEF@ GMAIL COME<gt>
@@ -316,7 +326,7 @@ Some of the code taken from L<Net::IMAP::Client>.
 
 =head1 SEE ALSO
 
-L<Net::IMAP::Client>, RFC 2060, L<AnyEvent>
+L<Net::IMAP::Client>, RFC 3501, L<AnyEvent>
 
 =head1 LICENSE
 
