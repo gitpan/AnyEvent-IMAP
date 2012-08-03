@@ -2,7 +2,7 @@ package AnyEvent::IMAP;
 use strict;
 use warnings;
 use 5.010001;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use parent qw(Object::Event);
 
@@ -169,6 +169,7 @@ sub status_multi {
 
 sub select {
     my ($self, $folder) = @_;
+    $folder = imap_string_quote($folder);
     my ($id, $cv) = $self->send_cmd("SELECT $folder");
     return $cv;
 }
