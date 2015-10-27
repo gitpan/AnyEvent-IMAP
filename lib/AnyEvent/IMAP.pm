@@ -139,6 +139,19 @@ sub folders {
     return $cv;
 }
 
+sub search {
+    my ($self, $opts) = @_;
+    my $all_cv = AE::cv();
+    my $cmd = sprintf("%s", imap_string_quote($opts));
+    use Data::Dumper;
+    my ($id, $cv) = $self->send_cmd("SEARCH $cmd", sub {
+        if ( $_[0] =~ /^\*\s+SEARCH\s+(.*)$/) {
+            return [ split(/\s+/, $1) ];
+        }
+    });
+    return $cv;
+}
+
 sub status {
     my ($self, $folder) = @_;
     my $all_cv = AE::cv();
